@@ -19,6 +19,15 @@ app.get('/nextWord', (req, res) => {
         if(word.length != 6){
             generateWord()
         } else {
+            var replacers = {
+                a: '@', e: '3', i: '!', o: '0', u: '4', h: '#', s: '$', q: '9', l: '1',
+            }
+    
+            for(let i in replacers){
+                if(word.indexOf(i) != -1){
+                    word = word.replace(i, replacers[i])
+                }
+            }
             console.log(word)
             res.json({word})
         }
