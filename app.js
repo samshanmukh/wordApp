@@ -15,6 +15,7 @@ app.use(express.urlencoded({ extended: true }))
 app.get('/nextWord', (req, res) => {
     function generateWord() {
         var word = randomWords()
+        var mixedWord = ''
     
         if(word.length != 6){
             generateWord()
@@ -25,11 +26,11 @@ app.get('/nextWord', (req, res) => {
     
             for(let i in replacers){
                 if(word.indexOf(i) != -1){
-                    word = word.replace(i, replacers[i])
+                    mixedWord = word.replace(i, replacers[i])
                 }
             }
             console.log(word)
-            res.json({word})
+            res.json({word, mixedWord})
         }
     }
     
