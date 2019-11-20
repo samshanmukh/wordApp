@@ -20,7 +20,7 @@ app.get('/nextWord', (req, res) => {
             generateWord()
         } else {
             console.log(word)
-            res.end(word)
+            res.json({word})
         }
     }
     
