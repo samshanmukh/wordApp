@@ -1,0 +1,24 @@
+{
+  "name": "wordapp",
+  "version": "1.0.0",
+  "description": "nodeJS app to generate random word using API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "app",
+    "word",
+    "generator",
+    "app",
+    "singleton",
+    "application"
+  ],
+  "author": "shanmukh sain",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1",
+    "random-words": "^1.1.0"
+  }
+}
