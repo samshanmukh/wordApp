@@ -20,13 +20,14 @@ app.get('/nextWord', (req, res) => {
         if(word.length != 6){
             generateWord()
         } else {
+            mixedWord = word
             var replacers = {
-                a: '@', e: '3', i: '!', o: '0', u: '4', h: '#', s: '$', q: '9', l: '1',
+                a: '@', e: '3', i: '!', o: '0', h: '#', s: '$', q: '9', l: '1',
             }
     
             for(let i in replacers){
-                if(word.indexOf(i) != -1){
-                    mixedWord = word.replace(i, replacers[i])
+                if(mixedWord.indexOf(i) != -1){
+                    mixedWord = mixedWord.replace(i, replacers[i])
                 }
             }
             console.log(word)
