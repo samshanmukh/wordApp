@@ -31,7 +31,7 @@ app.get('/nextWord', (req, res) => {
                 }
             }
             console.log(word)
-            mixedWord = mixedWord + (Math.round(99 * Math.random()))
+            // mixedWord = mixedWord + (Math.round(99 * Math.random()))
             res.json({word, mixedWord})
         }
     }
